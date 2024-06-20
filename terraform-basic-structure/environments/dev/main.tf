@@ -1,10 +1,10 @@
 provider "aws" {
-  region = "us-west-2"
+  region = "us-east-1"
 }
 
 module "dev_users" {
   source     = "../../modules/iam-user"
-  user_names = ["dev-user1", "dev-user2"]
+  user_name = ["dev-user1", "dev-user2"]
   tags       = {
     Environment = "dev"
   }
